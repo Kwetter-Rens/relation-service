@@ -72,7 +72,7 @@
                 </configuration>
             </plugin>
         </plugins>
-		<finalName>social-graph-service</finalName>
+		<finalName>relation-service</finalName>
 	</build>
 
 </project>

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/relation")
+@RequestMapping("/api/v1/relation")
 public class RelationController {
     private final RelationService relationService;
 
@@ -32,5 +32,10 @@ public class RelationController {
         if(relation != null) {
             this.relationService.deleteRelation(relation);
         }
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return "test from RelationService";
     }
 }
