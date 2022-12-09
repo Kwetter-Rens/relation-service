@@ -1,1 +1,1 @@
-# social-graph
+# Relation service
