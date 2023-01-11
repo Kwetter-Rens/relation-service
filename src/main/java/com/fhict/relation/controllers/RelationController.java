@@ -3,6 +3,7 @@ package com.fhict.relation.controllers;
 import com.fhict.relation.models.Relation;
 import com.fhict.relation.repositories.RelationRepository;
 import com.fhict.relation.services.RelationService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,8 +23,8 @@ public class RelationController {
     }
 
     @PostMapping()
-    public void createRelation(@RequestBody Relation relation) {
-        this.relationService.createRelation(relation);
+    public ResponseEntity<?> createRelation(@RequestBody Relation relation) {
+        return this.relationService.createRelation(relation);
     }
 
     @DeleteMapping("/{currentUserId}/{profileUserId}")
